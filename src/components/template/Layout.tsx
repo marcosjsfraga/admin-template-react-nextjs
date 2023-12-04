@@ -14,13 +14,14 @@ export default function Layout(props: Props) {
 
   return (
     <div className={`${theme} flex h-screen w-screen`}>
+      {/* MENU */}
       <SideMenu />
 
       <div className={`flex flex-col w-full p-7 bg-gray-100 dark:bg-gray-800`}>
-        {/* Header component */}
+        {/* HEADER  */}
         <Header title={props.title} subtitle={props.subtitle} />
         
-        {/* Content component */}
+        {/* CONTENT */}
         <Content>
           {props.children}
         </Content>

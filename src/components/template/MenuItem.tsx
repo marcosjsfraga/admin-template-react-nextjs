@@ -13,14 +13,15 @@ export default function MenuItem(props: Props) {
   
   function renderLink() {
     return (
-      <a className={
-          `flex flex-col justify-center items-center 
-          h-20 w-full text-gray-600 
-          dark:text-gray-200
-          ${props.className} `}
-        >
+      <a className={`
+        flex justify-start items-center 
+        h-10 w-full text-gray-600 
+        dark:text-gray-200
+        ml-3 mr-3
+        ${props.className} 
+      `}>
         {props.icon}
-        <span className={`text-xs font-light`}>
+        <span className={`_text-xs _font-light ml-2`}>
           {props.text}
         </span>
       </a>
@@ -32,7 +33,7 @@ export default function MenuItem(props: Props) {
         className={`
           hover:bg-gray-100 dark:hover:bg-gray-800 cursor-pointer
           w-full
-        `}>
+    `}>
       {props.url ? (
         <Link href={props.url} legacyBehavior>
           {renderLink()}
